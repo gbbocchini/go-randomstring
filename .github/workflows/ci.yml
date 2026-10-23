@@ -30,3 +30,8 @@ jobs:
 
       - name: Test
         run: go test ./...
+
+      - name: Vulnerability check
+        uses: golang/govulncheck-action@v1
+        with:
+          go-package: ./...
